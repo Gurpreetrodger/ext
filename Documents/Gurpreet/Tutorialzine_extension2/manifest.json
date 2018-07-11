@@ -1,0 +1,24 @@
+{
+	"name": "Myext",
+	"manifest_version": 2,
+	"version": "2",
+	"description": "Making your first Google Chrome extension.",
+	"icons":{
+		"128":"icon_128.png"
+	},
+	
+	"browser_action":	{
+		"default_icon": "icon.png",
+		"default_popup": "tutorialzine.html"
+	},
+	 "permissions": ["activeTab"],
+	 
+	 "content_scripts": [
+    {
+      "matches": ["https://buy.mi.com/*"],
+      "all_frames": true,
+      "js": ["jquery.min.js", "contentScript.js"]
+    }
+  ]
+
+}
